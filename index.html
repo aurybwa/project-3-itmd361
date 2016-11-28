@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>My Google Maps Demo</h3>
+
+<!-- form skeleton -->
+
+    <form class="form" method="post">
+        <label for="POST-name">First Name:</label>
+        <input id="POST-name" type="text">
+        <input type="submit" value="Save">
+        <label for="POST-location">Location:</label>
+        <input id="POST-location" type="text">
+        <input type="submit" value="Save">
+    </form>
+
+    <!-- script for google maps API -->
+
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var bujumbura = {
+                lat: -3.361378,
+                lng: 29.359878
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 9,
+                center: bujumbura
+            });
+            var marker = new google.maps.Marker({
+                position: bujumbura,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap">
+    </script>
+    <!-- end of script for google maps API -->
+</body>
+
+</html>
