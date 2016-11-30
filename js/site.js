@@ -4,28 +4,55 @@ $(document).ready(function() {
     $('#gh-form').on('submit', function(event) {
         event.preventDefault();
         let place = document.getElementById('gh-location').value;
-          // sorry I was using jquery syntax here--- should be value
-          // for vanilla js and val() for jquery
-          console.log(place);
         let geocoder = new google.maps.Geocoder();
-        geocoder.geocode( { 'address': place}, function(results, status) {
-          initMap(results);
+        geocoder.geocode({
+            'address': place
+        }, function(results, status) {
+            initMap(results);
         });
+        countryInfo(place);
     });
 
-      function initMap(place) {
+    function countryInfo(location) {
+        $.get(
+            'https://restcountries.eu/rest/v1/name/' + location,
+            function(data) {
+                console.log(data[0]);
+                var name = data[0].name;
+                var capital = data[0].capital;
+                var twoLetterCountryCode = data[0].alpha2Code;
+                var threeLetterCountryCode = data[0].alpha3Code;
+                var callingCode = data[0].callingCodes[0];
+                var region = data[0].region;
+                var subregion = data[0].subregion;
+
+                var list = '<ul>' +
+                    '<li id="countryName"> Country: ' + name + '</li>' +
+                    '<li id="countryCapital"> Capital: ' + capital + '</li>' +
+                    '<li id="twoLetterCountryCode">  Two-letter Country Code: ' + twoLetterCountryCode + '</li>' +
+                    '<li id="threeLetterCountryCode"> Three-letter Country Code: ' + threeLetterCountryCode + '</li>' +
+                    '<li id="callingCode"> Country calling code: ' + callingCode + '</li>' +
+                    '<li id="countryRegion"> Country region: ' + region + '</li>' +
+                    '<li id="subregion"> Country subregion: ' + subregion + '</li>' +
+                    '</ul>';
+
+                $('#primary').append(list);
+            });
+        event.preventDefault();
+    }
+
+    function initMap(place) {
 
         // place to lat, long object
 
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 5,
             center: place[0].geometry.location
-          });
+        });
 
-          var marker = new google.maps.Marker({
+        var marker = new google.maps.Marker({
             position: place[0].geometry.location,
             map: map
-          });
-      }
-
+        });
+    }
 });
