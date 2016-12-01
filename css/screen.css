@@ -42,7 +42,6 @@ header {
 }
 
 footer {
-  background-color: rgba(239,238,236,0.8);
   padding: 0.611em 1.222em;
   color: #7f7f7f;
   font-size: 0.666em;
@@ -52,11 +51,7 @@ footer {
 }
 
 form {
-  margin-top: 1.222em;
-  padding-top: 1.222em;
-  padding-bottom: 1.222em;
-  text-align: center;
-  background: #a2cfd3;
+  background-color: #a2cfd3;
   position: relative;
   border-radius: 0.55555em; /*10px/18px*/
 }
@@ -65,7 +60,7 @@ label {
   font-size: 1.333em; /*24px/18px*/
   display: block;
   font-weight: 500;
-  color: #222222;
+  color: #09363a;
 }
 
 input{
@@ -73,12 +68,29 @@ input{
 }
 
 input[type=search] {
-  border: 0.05555em solid #0d5157;
+  border: 0.1em solid #d0e7e9;
   border-radius: 0.55555em;
-  padding: 0.3055em;
   background-color: #e7f3f4;
   text-align: center;
 }
+
+input[type=submit] {
+  width: 5em;
+  border: none;
+  border-radius: 0.55555em;
+  background-color: #e7f3f4;
+  text-align: center;
+  -moz-box-shadow:    0.05555em 0.05555em 0.05555em 0.05555em #6e6e6e;
+  -webkit-box-shadow: 0.05555em 0.05555em 0.05555em 0.05555em #6e6e6e;
+  box-shadow:         0.05555em 0.05555em 0.05555em 0.05555em #6e6e6e;
+}
+
+input[type=submit]:hover {
+  color: #e7f3f4;
+  background-color:#147a83;
+  box-shadow: none;
+}
+
 
 /* ===== LAYOUT STYLES ===== */
 
@@ -94,8 +106,41 @@ h1 {
   text-align: center;
 }
 
+form {
+  margin-top: 1.222em;
+  padding-top: 1.222em;
+  padding-bottom: 1.222em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  text-align: center;
+}
+
+input[type=search] {
+   padding: 0.3055em;
+}
+
+input[type=submit] {
+   padding: 0.3055em;
+}
+
 #page {
   padding: 1.222em 0.916em; /* 16.5px */
+}
+
+#country-label {
+ padding-bottom: 0.3055em;
+}
+
+#map {
+  margin-top: 1.222em;
+}
+
+#country-details {
+  padding: 1.222em 0.916em;
+}
+
+.info {
+ padding-bottom: 0.3055em;
 }
 
 /* ===== MODULAR STYLES ===== */
@@ -103,7 +148,7 @@ h1 {
 #map {
   max-width: 100%;
 	width: 100%;
-	height: 9em;
+	height: 50vw;
 }
 
 #description {
@@ -113,6 +158,16 @@ h1 {
 
 #country-label {
  font-size: 1em;
+}
+
+#country-details {
+  font-size: 0.8889em;
+  background-color: #a2cfd3;
+}
+
+.info-label {
+  font-weight: 500;
+  color: #09363a;
 }
 
 /* ===== STATE STYLES ===== */
@@ -130,6 +185,33 @@ h1 {
   footer {
     padding-left: 3.664em;
   }
+  
+  label {
+    font-size: 1.875em; /*30/16px*/
+    padding-bottom: 0.3055em;
+  }
+  
+  input[type=search] {
+    padding: 0.611em;
+    font-size: 0.8em;
+  }
+
+  input[type=submit] {
+    padding: 0.611em;
+    font-size: 0.8em;
+  }
+  
+  #country-label {
+    font-size: 1.5em;
+  }
+  
+  #description {
+    font-size: 1.1875em;/*19px/16px*/
+  }
+  
+  .info-label, .info {
+    font-size: 1.25em; /*20px/16px*/
+  }
 }
 
 @media screen and (min-width: 53.3125em) {
@@ -139,9 +221,49 @@ h1 {
     margin-right: 13.13%;
 
   }
+  
+  h1 {
+    font-size: 3em;
+  }
 
   footer {
     text-align: center;
+  }
+  
+  form {
+    padding-top: 2.444em;
+    padding-bottom: 2.444em;
+  }
+  
+  label {
+    font-size: 2.125em; /*34/16px*/
+  }
+  
+  header{
+    margin-bottom: 2.444em;
+  }
+  
+  input[type=search] {
+    padding: 0.611em;
+    font-size: 1em;
+  }
+
+  input[type=submit] {
+    padding: 0.611em;
+    font-size: 1em;
+  }
+  
+  #country-label {
+    font-size: 1.5em;
+    padding-bottom: 0.3055em;
+  }
+  
+  #description {
+    font-size: 1.375em; /*22px/16px*/
+  }
+  
+  .info-label, .info {
+    font-size: 1.375em; /*22px/16px*/
   }
 }
 
@@ -151,10 +273,56 @@ h1 {
   }
 
   h1 {
-    font-size: 2.444em; /*44px/18px */
+    font-size: 3.25em; /*52px/16px */
   }
-
+  
   footer {
     text-align: center;
   }
+  
+  form {
+    padding-top: 3.36em;
+    padding-bottom: 3.36em;
+  }
+  
+  label {
+    font-size: 2.5em; /*40/16px*/
+    padding-bottom: 0.611em;
+  }
+  
+  header{
+    margin-bottom: 3.356em;
+  }
+  
+  input[type=search] {
+    padding: 0.611em;
+    font-size: 1.2em;
+  }
+
+  input[type=submit] {
+    padding: 0.611em;
+    font-size: 1.2em;
+  }
+  
+  #country-label {
+    font-size: 1.8em;
+    padding-bottom: 0.611em;
+  }
+  
+  #description {
+    font-size: 1.5em; /*24px/16px*/
+  }
+  
+  .info-label {
+    padding-bottom: 0.15275em;
+  }
+  
+  .info {
+    padding-bottom: 0.4em;
+  }
+  .info-label, .info {
+    font-size: 1.5em; /*24px/16px*/
+  }
+
+  
 }
