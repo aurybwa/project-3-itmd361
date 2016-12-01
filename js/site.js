@@ -27,19 +27,19 @@ $(document).ready(function() {
                 var subregion = data[0].subregion;
 
                 var list = '<ul id="country-details">' +
-                    '<li id="country-name">Country</li>' +
+                    '<li class="info-label" id="country-name">Country</li>' +
                     '<li>' + name + '</li>' +
-                    '<li id="country-capital">Capital</li>' +
+                    '<li class="info-label" id="country-capital">Capital</li>' +
                     '<li>' + capital + '</li>' +
-                    '<li id="two-letter-country-code">Two-letter country code</li>' +
+                    '<li class="info-label" id="two-letter-country-code">Two-letter country code</li>' +
                     '<li>' + twoLetterCountryCode + '</li>' +
-                    '<li id="three-letter-country-code">Three-letter country code</li>' +
+                    '<li class="info-label" id="three-letter-country-code">Three-letter country code</li>' +
                     '<li>' + threeLetterCountryCode + '</li>' +
-                    '<li id="calling-code">Calling code</li>' +
+                    '<li class="info-label" id="calling-code">Calling code</li>' +
                     '<li>' + callingCode + '</li>' +
-                    '<li id="country-region">Region</li>' +
+                    '<li class="info-label" id="country-region">Region</li>' +
                     '<li>' + region  + '</li>' +
-                    '<li id="subregion">Subregion</li>' +
+                    '<li class="info-label" id="subregion">Subregion</li>' +
                     '<li>' + subregion + '</li>' +
                     '</ul>';
 
