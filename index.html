@@ -9,28 +9,34 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC6PbEAtxMZz4cNr0WEoarwO0nQ1UzlCU">
     </script>
   </head>
+  
   <body>
-    <header>
-      <h1>Travel Guide</h1>
-    </header>
+    <div id="page">
+      <header>
+        <h1>Travel Guide</h1>
+        <ul>
+        <li id="description">Your one stop site for basic country information</li>
+        </ul>
+      </header>
   
-    <main>
-      <form id="gh-form" name="gh-form" method="get" action="#null">
-        <label for="gh-location">Where are you traveling?:</label>
-        <input type="text" id="gh-location" name="gh-location"/>
-        <input type="submit" id="gh-submit" name="gh-submit" value="Save"/>
-      </form>
-      <div class="country-information">
-        <div id="map"></div>
-        <div id="primary"></div>
+      <main>
+        <form id="gh-form" name="gh-form" method="get" action="#null">
+          <label for="gh-location">Where are you traveling?</label>
+          <input type="search" id="gh-location" name="gh-location"/>
+          <input type="submit" id="gh-submit" name="gh-submit" value="Save"/>
+        </form>
+        <div class="country-information">
+          <div id="map"></div>
+          <div id="primary"></div>
+        </div>
+      </main>
+  
+      <footer>
+      Site content and design by Shameemah Fuseini-Codjoe and Aury Ken Bwashi.
+      Copyright © 2016 Shameemah Fuseini-Codjoe and Aury Ken Bwashi All rights reserved.
+      </footer>
+  
+      <script src="/js/site.js"></script>
       </div>
-    </main>
-  
-    <footer>
-    Site content and design by Shameemah Fuseini-Codjoe and Aury Ken Bwashi.
-    Copyright © 2016 Shameemah Fuseini-Codjoe and Aury Ken Bwashi All rights reserved.
-    </footer>
-  
-    <script src="/js/site.js"></script>
   </body>
 </html>
