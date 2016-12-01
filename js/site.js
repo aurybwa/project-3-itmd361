@@ -28,19 +28,19 @@ $(document).ready(function() {
 
                 var list = '<ul id="country-details">' +
                     '<li class="info-label" id="country-name">Country</li>' +
-                    '<li>' + name + '</li>' +
+                    '<li class="info">' + name + '</li>' +
                     '<li class="info-label" id="country-capital">Capital</li>' +
-                    '<li>' + capital + '</li>' +
+                    '<li class="info">' + capital + '</li>' +
                     '<li class="info-label" id="two-letter-country-code">Two-letter country code</li>' +
-                    '<li>' + twoLetterCountryCode + '</li>' +
+                    '<li class="info">' + twoLetterCountryCode + '</li>' +
                     '<li class="info-label" id="three-letter-country-code">Three-letter country code</li>' +
-                    '<li>' + threeLetterCountryCode + '</li>' +
+                    '<li class="info">' + threeLetterCountryCode + '</li>' +
                     '<li class="info-label" id="calling-code">Calling code</li>' +
-                    '<li>' + callingCode + '</li>' +
+                    '<li class="info">' + callingCode + '</li>' +
                     '<li class="info-label" id="country-region">Region</li>' +
-                    '<li>' + region  + '</li>' +
+                    '<li class="info">' + region  + '</li>' +
                     '<li class="info-label" id="subregion">Subregion</li>' +
-                    '<li>' + subregion + '</li>' +
+                    '<li class="info">' + subregion + '</li>' +
                     '</ul>';
 
                 $('#primary').append(list);
