@@ -1,27 +1,42 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="en">
+  <head>
+    <title>Travel Guide</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
     <link rel="stylesheet" media="screen" href="/css/screen.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC6PbEAtxMZz4cNr0WEoarwO0nQ1UzlCU">
     </script>
-</head>
-
-<body>
-    <h1>My Google Maps Demo</h1>
-    <form id="gh-form" name="gh-form" method="get" action="#null">
-        <label for="gh-location">Where are you traveling?:</label>
-        <input type="text" id="gh-location" name="gh-location">
-        <input type="submit" id="gh-submit" name="gh-submit" value="Save">
-    </form>
-    <div class="countryInformation">
-      <div id="map"></div>
-      <div id="primary"></div>
+  </head>
+  
+  <body>
+    <div id="page">
+      <header>
+        <h1>Travel Guide</h1>
+        <ul>
+        <li id="description">Your one stop site for basic country information</li>
+        </ul>
+      </header>
+  
+      <main>
+        <form id="gh-form" name="gh-form" method="get" action="#null">
+          <label for="gh-location">Where are you traveling?</label>
+          <label id="country-label">(Country)</label>
+          <input type="search" id="gh-location" name="gh-location"/>
+          <input type="submit" id="gh-submit" name="gh-submit" value="Go!"/>
+        </form>
+        <div class="country-information">
+          <div id="map"></div>
+          <div id="primary"></div>
+        </div>
+      </main>
+  
+      <footer>
+      Copyright © 2016 All rights reserved.
+      </footer>
+  
+      <script src="/js/site.js"></script>
     </div>
-    <script src="/js/site.js"></script>
-</body>
-
+  </body>
 </html>

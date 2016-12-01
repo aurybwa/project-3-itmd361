@@ -26,14 +26,21 @@ $(document).ready(function() {
                 var region = data[0].region;
                 var subregion = data[0].subregion;
 
-                var list = '<ul>' +
-                    '<li id="countryName"> Country: ' + name + '</li>' +
-                    '<li id="countryCapital"> Capital: ' + capital + '</li>' +
-                    '<li id="twoLetterCountryCode">  Two-letter Country Code: ' + twoLetterCountryCode + '</li>' +
-                    '<li id="threeLetterCountryCode"> Three-letter Country Code: ' + threeLetterCountryCode + '</li>' +
-                    '<li id="callingCode"> Country calling code: ' + callingCode + '</li>' +
-                    '<li id="countryRegion"> Country region: ' + region + '</li>' +
-                    '<li id="subregion"> Country subregion: ' + subregion + '</li>' +
+                var list = '<ul id="country-details">' +
+                    '<li class="info-label" id="country-name">Country</li>' +
+                    '<li class="info">' + name + '</li>' +
+                    '<li class="info-label" id="country-capital">Capital</li>' +
+                    '<li class="info">' + capital + '</li>' +
+                    '<li class="info-label" id="two-letter-country-code">Two-letter country code</li>' +
+                    '<li class="info">' + twoLetterCountryCode + '</li>' +
+                    '<li class="info-label" id="three-letter-country-code">Three-letter country code</li>' +
+                    '<li class="info">' + threeLetterCountryCode + '</li>' +
+                    '<li class="info-label" id="calling-code">Calling code</li>' +
+                    '<li class="info">' + callingCode + '</li>' +
+                    '<li class="info-label" id="country-region">Region</li>' +
+                    '<li class="info">' + region  + '</li>' +
+                    '<li class="info-label" id="subregion">Subregion</li>' +
+                    '<li class="info">' + subregion + '</li>' +
                     '</ul>';
 
                 $('#primary').append(list);
