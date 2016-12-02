@@ -184,6 +184,16 @@ input[type=submit] {
     font-size: 2.222em;
   }
 
+  header {
+    background: url(../img/headerimage-5184-30.jpg) #49311c;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: left;
+  }
+
   footer {
     padding-left: 3.664em;
   }
