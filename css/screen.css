@@ -72,6 +72,7 @@ input[type=search] {
   border-radius: 0.55555em;
   background-color: #e7f3f4;
   text-align: center;
+  -webkit-appearance: none; 
 }
 
 input[type=submit] {
