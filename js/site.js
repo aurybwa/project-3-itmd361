@@ -23,6 +23,11 @@ $(document).ready(function() {
         countryInfo(place);
     });
 
+    //function to clear form.
+    function clearForm() {
+        document.getElementById('gh-form').reset();
+    }
+
     //get country information from RESTcountries API.
     function countryInfo(location) {
         $.get(
@@ -72,5 +77,8 @@ $(document).ready(function() {
             position: place[0].geometry.location,
             map: map
         });
+
+        //clear form fields when this function is called.
+        clearForm();
     }
 });
