@@ -272,6 +272,10 @@ input[type="submit"]:hover {
     font-size: 1.375em; /*22px/16px*/
   }
 
+  #map {
+    height: 30vw;
+  }
+
   .info-label, .info {
     font-size: 1.375em; /*22px/16px*/
   }
