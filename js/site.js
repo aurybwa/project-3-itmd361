@@ -34,29 +34,22 @@ $(document).ready(function() {
             'https://restcountries.eu/rest/v1/name/' + location,
             function(data) {
                 var c = data[0];
-                var name = c.name;
-                var capital = c.capital;
-                var twoLetterCountryCode = c.alpha2Code;
-                var threeLetterCountryCode = c.alpha3Code;
-                var callingCode = c.callingCodes[0];
-                var region = c.region;
-                var subregion = c.subregion;
 
                 var list = '<ul id="country-details">' +
                     '<li class="info-label" id="country-name">Country</li>' +
-                    '<li class="info">' + name + '</li>' +
+                    '<li class="info">' + c.name + '</li>' +
                     '<li class="info-label" id="country-capital">Capital</li>' +
-                    '<li class="info">' + capital + '</li>' +
+                    '<li class="info">' + c.capital + '</li>' +
                     '<li class="info-label" id="two-letter-country-code">Two-letter country code</li>' +
-                    '<li class="info">' + twoLetterCountryCode + '</li>' +
+                    '<li class="info">' + c.alpha2Code + '</li>' +
                     '<li class="info-label" id="three-letter-country-code">Three-letter country code</li>' +
-                    '<li class="info">' + threeLetterCountryCode + '</li>' +
+                    '<li class="info">' + c.alpha3Code + '</li>' +
                     '<li class="info-label" id="calling-code">Calling code</li>' +
-                    '<li class="info">' + callingCode + '</li>' +
+                    '<li class="info">' + c.callingCodes[0] + '</li>' +
                     '<li class="info-label" id="country-region">Region</li>' +
-                    '<li class="info">' + region + '</li>' +
+                    '<li class="info">' + c.region + '</li>' +
                     '<li class="info-label" id="subregion">Subregion</li>' +
-                    '<li class="info">' + subregion + '</li>' +
+                    '<li class="info">' + c.subregion + '</li>' +
                     '</ul>';
 
                 $('#primary').append(list);
