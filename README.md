@@ -8,12 +8,12 @@ Here is a preview of the website in use:
 ## Team members
 Name: Shameemah Fuseini-Codjoe
 Strengths:
-CSS
-JQuery
+CSS,
+JQuery,
 UI Design
 
 Name: Aury Bwashi
-Strengths
-HTML
-JavaScript, jQuery
+Strengths: 
+HTML,
+JavaScript, jQuery,
 CSS
