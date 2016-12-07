@@ -11,7 +11,7 @@ $(document).ready(function() {
 
     //this checks to see if a previous country's information is already displayed.
     //if some information is displayed, it clears it out the element for the next search
-      $('#primary').empty();
+    $('#primary').empty();
 
     geocoder.geocode({
       'address': place
