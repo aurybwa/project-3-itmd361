@@ -6,14 +6,12 @@ $(document).ready(function() {
 
     //get the geocoded value of place and use it to make a map with initMap function
     var geocoder = new google.maps.Geocoder();
-    
+
     event.preventDefault();
 
     //this checks to see if a previous country's information is already displayed.
     //if some information is displayed, it clears it out the element for the next search
-    if (!$('#primary').is(':empty')) {
-      $('#primary').empty();
-    }
+    $('#primary').empty();
 
     geocoder.geocode({
       'address': place
