@@ -2,16 +2,19 @@
 $(document).ready(function() {
   $('#gh-form').on('submit', function(event) {
     // get the value of the string entered by user into variable called "place"
-    var place = document.getElementById('gh-location').value;
+    var place = $('#gh-location').val();
 
     //get the geocoded value of place and use it to make a map with initMap function
     var geocoder = new google.maps.Geocoder();
 
     event.preventDefault();
 
+    //Function to clear information about country before a new search
     //this checks to see if a previous country's information is already displayed.
     //if some information is displayed, it clears it out the element for the next search
-    $('#primary').empty();
+    if (!$('#primary').is(':empty')) {
+      $('#primary').empty();
+    }
 
     geocoder.geocode({
       'address': place
@@ -23,7 +26,7 @@ $(document).ready(function() {
 
   //function to clear form.
   function clearForm() {
-    document.getElementById('gh-form').reset();
+    $('#gh-form')[0].reset();
   }
 
   //get country information from RESTcountries API.
@@ -59,7 +62,7 @@ $(document).ready(function() {
 
       // place to lat, long object
 
-    var map = new google.maps.Map(document.getElementById('map'), {
+    var map = new google.maps.Map($('#map')[0], {
       zoom: 5,
       center: place[0].geometry.location
     });
